@@ -5,3 +5,37 @@ body {
   height: 100vh;
   line-height: 40px;
 }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero-section {
+  background-image: url("./assets/images/hero-background.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+.hero-paragraph {
+  padding: 80px, 0px, 80px, 0px;
+}
+.title-one {
+  font-size: 74px;
+  color: #ffffff;
+  line-height: 84px;
+  align-items: center;
+}
+
+.paragraph-one {
+  font-size: 28px;
+  align-items: center;
+  color: #ffffff;
+}
+
+.button1 {
+  background-color: #2091f9;
+  color: #ffffff;
+  padding: 16px, 0px, 16px, 0px;
+  border-radius: 35px;
+  align-items: center;
+}
