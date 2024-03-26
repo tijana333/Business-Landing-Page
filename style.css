@@ -1,9 +1,6 @@
-body {
-  font-family: Graphik;
-  margin: 0;
+* {
   padding: 0;
-  height: 100vh;
-  line-height: 40px;
+  box-sizing: border-box;
 }
 
 .container {
@@ -12,11 +9,15 @@ body {
 }
 
 .hero-section {
+  display: flex;
+  justify-content: center;
+  text-align: center;
   background-image: url("./assets/images/hero-background.png");
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
 }
+
 .hero-paragraph {
   padding: 80px, 0px, 80px, 0px;
 }
@@ -25,20 +26,43 @@ body {
   color: #ffffff;
   line-height: 84px;
   justify-content: center;
+  margin-top: 110px;
+  margin-bottom: 7px;
 }
 
 .paragraph-one {
   font-size: 28px;
   align-items: center;
   color: #ffffff;
-  width: 50%;
   text-align: center;
+  margin-bottom: 60px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .button1 {
   background-color: #2091f9;
+  border-color: #2091f9;
   color: #ffffff;
-  padding: 16px, 0px, 16px, 0px;
+  padding: 0px 16px;
   border-radius: 35px;
   justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-header {
+    padding: 30px 20px;
+  }
+
+  .title-one {
+    font-size: 48px;
+    line-height: 55px;
+  }
+  .paragraph-one {
+    font-size: 28px;
+    white-space: normal;
+    text-overflow: clip;
+    overflow: visible;
+  }
 }
