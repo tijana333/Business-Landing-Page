@@ -14,7 +14,7 @@
   text-align: center;
   background-image: url("./assets/images/hero-background.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   height: 100vh;
 }
 
@@ -48,8 +48,14 @@
   padding: 0px 16px;
   border-radius: 35px;
   justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.button1:hover {
+  background-color: #fff;
+  color: #3498db;
+}
 @media only screen and (max-width: 600px) {
   .hero-header {
     padding: 30px 20px;
