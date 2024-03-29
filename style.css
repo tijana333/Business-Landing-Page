@@ -134,6 +134,7 @@
   background-color: #fff;
   color: #3498db;
 }
+
 @media only screen and (max-width: 600px) {
   .hero-header {
     padding: 30px 20px;
