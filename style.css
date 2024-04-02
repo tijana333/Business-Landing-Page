@@ -62,7 +62,7 @@
   color: #ffffff;
 }
 
-.ul {
+/* .ul {
   list-style: none;
 }
 
@@ -113,7 +113,7 @@ ul li:hover .sub-menu {
 ul .sub-menu li {
   margin: 0;
   width: 100%;
-}
+} */
 
 @media only screen and (max-width: 600px) {
   .hero-inner-container-logo {
