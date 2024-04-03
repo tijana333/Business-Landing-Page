@@ -58,8 +58,13 @@ body {
   gap: 24px;
 }
 
+.logo-section a:hover {
+  transform: scale(1.2);
+}
+
 .logo-section a {
   color: #ffffff;
+  transition: transform 0.3s ease;
 }
 
 .dropdown {
@@ -96,6 +101,14 @@ ul li:hover ul.dropdown {
   color: black;
 }
 
+.secondary-menu li {
+  position: relative;
+}
+
+ul li:hover .dropdown {
+  position: absolute;
+}
+
 @media only screen and (max-width: 600px) {
   .hero-inner-container-logo {
     margin-left: 16px;
@@ -126,7 +139,7 @@ ul li:hover ul.dropdown {
   text-align: center;
   background-image: url("./assets/images/hero-background.png");
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: top;
   height: 100vh;
 }
 
