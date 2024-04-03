@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-.body {
+body {
   font-family: "Graphik";
   line-height: 40px;
 }
@@ -62,58 +62,39 @@
   color: #ffffff;
 }
 
-/* .ul {
-  list-style: none;
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
-.ul li {
-  display: inline-block;
-  position: relative;
-}
-
-.ul li a {
-  display: block;
-  padding: 20px 25px;
-  color: #ffffff;
+.dropdown a {
+  color: black;
+  padding: 12px 16px;
   text-decoration: none;
-  text-decoration: center;
-  font-size: 20px;
-}
-
-.ul li ul.sub-menu {
-  width: 100%;
-  background: #ffffff;
-  position: absolute;
-  box-shadow: 0 20px 45px #2091f9;
-  opacity: 0;
-  z-index: 999;
-  transition: all ease 0.3s;
-}
-
-.ul li ul.sub-menu-contact {
-  width: 100%;
-  background: #ffffff;
-  position: absolute;
-  box-shadow: 0 20px 45px #2091f9;
-  opacity: 0;
-  z-index: 999;
-  transition: all ease 0.3s;
-}
-ul li a:hover {
-  background: #ffffff;
-}
-
-ul li:hover .sub-menu {
-  z-index: 99;
-  opacity: 1;
-  margin-top: 0;
   display: block;
 }
 
-ul .sub-menu li {
-  margin: 0;
-  width: 100%;
-} */
+.dropdown a:hover {
+  background-color: #f1f1f1;
+}
+
+ul li .dropdown {
+  display: none;
+  position: relative;
+  list-style: none;
+  color: black;
+}
+
+ul li:hover ul.dropdown {
+  display: block;
+}
+
+.dropdown li a {
+  color: black;
+}
 
 @media only screen and (max-width: 600px) {
   .hero-inner-container-logo {
@@ -150,7 +131,7 @@ ul .sub-menu li {
 }
 
 .hero-paragraph {
-  padding: 80px, 0px, 80px, 0px;
+  padding: 80px 0px 80px 0px;
 }
 .title-one {
   font-size: 74px;
