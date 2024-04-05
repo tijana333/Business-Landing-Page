@@ -248,18 +248,37 @@ ul li:hover .dropdown {
   color: #252b42;
 }
 
-.features-bottom-images {
+.features-bottom-images > img {
   max-width: 100%;
   max-height: auto;
   justify-content: center;
   align-items: center;
-  /* width: 1177.34px;
-  height: 658.3px;
-  border-radius: 81.48px; */
 }
 .central-section-first-part
   .central-section-second-part
   .central-section-third-part {
   display: flex;
   flex-direction: column;
+}
+
+.unite-class {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+  .features-bottom-images > img {
+    content: url("assets/images/features/video-screen-mobile-version.png");
+    padding: 6.68px 0px 6.68px 0px;
+  }
+
+  .unite-class {
+    flex-direction: column-reverse;
+  }
+
+  .central-section {
+    flex-direction: column;
+    padding: 18px 0px 18px 0px;
+    width: 50%;
+  }
 }
