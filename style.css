@@ -141,6 +141,7 @@ ul li:hover .dropdown {
   background-repeat: no-repeat;
   background-position: top;
   height: 100vh;
+  background-size: cover;
 }
 
 .hero-paragraph {
@@ -197,4 +198,68 @@ ul li:hover .dropdown {
     text-overflow: clip;
     overflow: visible;
   }
+}
+
+/* features section */
+.features-outer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.h1 {
+  font-size: 48px;
+  font-weight: normal;
+  color: #252b42;
+  margin-bottom: 17px;
+}
+
+.h2 {
+  font-size: 28px;
+  font-weight: normal;
+  width: 40%;
+  margin: 0 auto;
+  color: #374754;
+  margin-bottom: 80px;
+}
+
+.central-section {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #374754;
+  gap: 52px;
+  align-items: center;
+  line-height: 25px;
+}
+
+.features-images {
+  width: 45.75px;
+  height: 45.75px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+.h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #252b42;
+}
+
+.features-bottom-images {
+  max-width: 100%;
+  max-height: auto;
+  justify-content: center;
+  align-items: center;
+  /* width: 1177.34px;
+  height: 658.3px;
+  border-radius: 81.48px; */
+}
+.central-section-first-part
+  .central-section-second-part
+  .central-section-third-part {
+  display: flex;
+  flex-direction: column;
 }
