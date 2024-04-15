@@ -318,7 +318,7 @@ ul li:hover .dropdown {
   background-color: #2091f9;
   border-color: #2091f9;
   color: #ffffff;
-  padding: 0px 16px;
+  padding: 12px 16px;
   border-radius: 35px;
   border: 1px;
   justify-content: center;
@@ -329,5 +329,10 @@ ul li:hover .dropdown {
 @media only screen and (max-width: 600px) {
   .key-unite-class {
     flex-direction: column;
+    gap: 10px;
+  }
+
+  .h2-key {
+    font-size: 20px;
   }
 }
