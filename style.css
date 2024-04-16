@@ -338,3 +338,66 @@ ul li:hover .dropdown {
     line-height: 30px;
   }
 }
+
+/* lightning-section */
+.lightning-unite-class {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  padding: 43px 0px 43px 0px;
+  align-items: center;
+}
+
+.lightning-img-section {
+  max-width: 55%;
+}
+
+.lightning-img-section > img {
+  max-width: 100%;
+  max-height: auto;
+}
+
+.lightning-paragraf-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 45%;
+  padding-top: 57px;
+  padding-bottom: 57px;
+}
+.button-lightning-1 {
+  background-color: #e8e8e8;
+  border-color: #e8e8e8;
+  color: #18171d;
+  padding: 19px 38px;
+  border-radius: 35px;
+  border: 1px;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-lightning-2 {
+  background-color: #2091f9;
+  border-color: #2091f9;
+  color: #ffffff;
+  padding: 19px 39px;
+  border-radius: 39px;
+  border: 1px;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.lightning-h3 {
+  font-size: 20px;
+  line-height: 28px;
+  color: #252b42;
+}
+
+.h4 {
+  font-size: 20px;
+  line-height: 28px;
+  color: #252b42;
+  font-weight: bold;
+}
