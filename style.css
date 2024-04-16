@@ -1,5 +1,6 @@
 * {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -20,7 +21,6 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
 .hero-inner-container-menu {
   display: flex;
   align-items: center;
@@ -281,4 +281,145 @@ ul li:hover .dropdown {
     padding: 18px 0px 18px 0px;
     width: 50%;
   }
+}
+
+/* key-benefit-section */
+
+.key-unite-class {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  padding: 43px 0px 43px 0px;
+  align-items: center;
+}
+
+.key-benefit-img-section {
+  max-width: 55%;
+}
+
+.key-benefit-img-section > img {
+  max-width: 100%;
+  max-height: auto;
+}
+.h2-key {
+  font-size: 28px;
+  line-height: 40px;
+  color: #374754;
+  font-weight: normal;
+}
+.key-benefit-paragraf-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 45%;
+  padding-top: 57px;
+  padding-bottom: 57px;
+}
+.button2 {
+  background-color: #2091f9;
+  border-color: #2091f9;
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 35px;
+  border: 1px;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+@media only screen and (max-width: 600px) {
+  .key-unite-class {
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px 20px 30px 20px;
+  }
+
+  .h2-key {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+/* lightning-section */
+.lightning-unite-class {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  padding: 43px 0px 43px 0px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lightning-img-section {
+  max-width: 50%;
+}
+
+.lightning-img-section > img {
+  max-width: 100%;
+  max-height: auto;
+}
+
+.lightning-paragraf-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+}
+.button-lightning-1 {
+  background-color: #e8e8e8;
+  border-color: #e8e8e8;
+  color: #18171d;
+  padding: 19px 39px;
+  border-radius: 39px;
+  border: 1px;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-lightning-2 {
+  background-color: #2091f9;
+  border-color: #2091f9;
+  color: #ffffff;
+  padding: 19px 38px;
+  border-radius: 35px;
+  border: 1px;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.lightning-h3 {
+  font-size: 20px;
+  line-height: 28px;
+  color: #252b42;
+  margin-bottom: 7px;
+}
+
+.lightning-h2 {
+  font-size: 48px;
+  line-height: 55px;
+  color: #252b42;
+  margin-bottom: 25px;
+  font-weight: normal;
+}
+.h4 {
+  font-size: 20px;
+  line-height: 28px;
+  color: #252b42;
+}
+
+.p {
+  font-size: 18px;
+  line-height: 25px;
+  color: #374754;
+  margin-bottom: 36px;
+}
+
+.first-part {
+  padding: 10px 0px;
+}
+
+.lightning-buttons {
+  display: flex;
+  gap: 12px;
 }
