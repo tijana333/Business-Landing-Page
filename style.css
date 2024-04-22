@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Graphik";
+  font-family: "Graphik", sans-serif;
   line-height: 40px;
 }
 
@@ -351,7 +351,7 @@ ul li:hover .dropdown {
 }
 
 .lightning-img-section {
-  max-width: 50%;
+  max-width: 55%;
 }
 
 .lightning-img-section > img {
@@ -362,9 +362,9 @@ ul li:hover .dropdown {
 .lightning-paragraf-section {
   display: flex;
   flex-direction: column;
-  max-width: 50%;
+  max-width: 45%;
 }
-.button-lightning-1 {
+input {
   background-color: #e8e8e8;
   border-color: #e8e8e8;
   color: #18171d;
@@ -374,6 +374,7 @@ ul li:hover .dropdown {
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 14px;
 }
 
 .button-lightning-2 {
@@ -386,6 +387,12 @@ ul li:hover .dropdown {
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 20px;
+}
+
+.lightning-buttons {
+  display: flex;
+  gap: 12px;
 }
 
 .lightning-h3 {
@@ -419,7 +426,56 @@ ul li:hover .dropdown {
   padding: 10px 0px;
 }
 
-.lightning-buttons {
+.lightning-button-input {
   display: flex;
   gap: 12px;
+}
+
+.second-part-main-part {
+  line-height: 1;
+  margin-bottom: 36px;
+}
+
+@media only screen and (max-width: 1496px) {
+  #naslovManjiekrani,
+  #paragrafManjiekrani {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .lightning-unite-class {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 20px;
+    font-size: 80%;
+  }
+
+  .lightning-button-input {
+    flex-wrap: wrap;
+  }
+
+  .lightning-h2 {
+    display: none;
+  }
+
+  #naslovManjiekrani,
+  #paragrafManjiekrani {
+    display: block;
+  }
+
+  #paragrafManjiekrani {
+    font-size: 18px;
+    color: #374754;
+    line-height: 40px;
+  }
+
+  #naslovManjiekrani {
+    font-size: 30px;
+    line-height: 55px;
+  }
+
+  .first-part {
+    flex-direction: column-reverse;
+  }
 }
