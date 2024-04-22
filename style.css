@@ -401,3 +401,120 @@ ul li:hover .dropdown {
   color: #252b42;
   font-weight: bold;
 }
+
+/* lightning-section */
+.lightning-unite-class {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  padding: 43px 0px 43px 0px;
+  align-items: center;
+}
+
+.lightning-img-section {
+  max-width: 55%;
+}
+
+.lightning-img-section > img {
+  max-width: 100%;
+  max-height: auto;
+}
+
+.lightning-paragraf-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 45%;
+  padding-top: 57px;
+  padding-bottom: 57px;
+}
+.input {
+  background-color: #e8e8e8;
+  border-color: #e8e8e8;
+  color: #18171d;
+  padding: 19px 38px;
+  border-radius: 35px;
+  border: 1px;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-lightning-2 {
+  background-color: #2091f9;
+  border-color: #2091f9;
+  color: #ffffff;
+  padding: 19px 39px;
+  border-radius: 39px;
+  border: 1px;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.lightning-h3 {
+  font-size: 20px;
+  line-height: 28px;
+  color: #252b42;
+}
+
+.h4 {
+  font-size: 20px;
+  line-height: 28px;
+  color: #252b42;
+  font-weight: bold;
+}
+
+.lightning-button-input {
+  display: flex;
+  gap: 12px;
+}
+
+.second-part-main-part {
+  line-height: 1;
+  margin-bottom: 36px;
+}
+
+@media only screen and (max-width: 1496px) {
+  #naslovManjiekrani,
+  #paragrafManjiekrani {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .lightning-unite-class {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 20px;
+    font-size: 80%;
+  }
+
+  .lightning-button-input {
+    flex-wrap: wrap;
+  }
+
+  .lightning-h2 {
+    display: none;
+  }
+
+  #naslovManjiekrani,
+  #paragrafManjiekrani {
+    display: block;
+  }
+
+  #paragrafManjiekrani {
+    font-size: 18px;
+    color: #374754;
+    line-height: 40px;
+  }
+
+  #naslovManjiekrani {
+    font-size: 30px;
+    line-height: 55px;
+  }
+
+  .first-part {
+    flex-direction: column-reverse;
+  }
+}
