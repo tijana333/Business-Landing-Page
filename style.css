@@ -1,10 +1,11 @@
 * {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Graphik";
+  font-family: "Graphik", sans-serif;
   line-height: 40px;
 }
 
@@ -362,10 +363,8 @@ ul li:hover .dropdown {
   flex-direction: column;
   gap: 10px;
   max-width: 45%;
-  padding-top: 57px;
-  padding-bottom: 57px;
 }
-.button-lightning-1 {
+input {
   background-color: #e8e8e8;
   border-color: #e8e8e8;
   color: #18171d;
@@ -375,6 +374,8 @@ ul li:hover .dropdown {
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 16px;
+  width: 100%;
 }
 
 .button-lightning-2 {
@@ -387,75 +388,20 @@ ul li:hover .dropdown {
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 20px;
 }
-
+.lightning-h2 {
+  font-size: 48px;
+  line-height: 55px;
+  color: #252b42;
+  font-weight: normal;
+  margin-bottom: 25px;
+}
 .lightning-h3 {
   font-size: 20px;
   line-height: 28px;
   color: #252b42;
-}
-
-.h4 {
-  font-size: 20px;
-  line-height: 28px;
-  color: #252b42;
-  font-weight: bold;
-}
-
-/* lightning-section */
-.lightning-unite-class {
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-  padding: 43px 0px 43px 0px;
-  align-items: center;
-}
-
-.lightning-img-section {
-  max-width: 55%;
-}
-
-.lightning-img-section > img {
-  max-width: 100%;
-  max-height: auto;
-}
-
-.lightning-paragraf-section {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 45%;
-  padding-top: 57px;
-  padding-bottom: 57px;
-}
-.input {
-  background-color: #e8e8e8;
-  border-color: #e8e8e8;
-  color: #18171d;
-  padding: 19px 38px;
-  border-radius: 35px;
-  border: 1px;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button-lightning-2 {
-  background-color: #2091f9;
-  border-color: #2091f9;
-  color: #ffffff;
-  padding: 19px 39px;
-  border-radius: 39px;
-  border: 1px;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.lightning-h3 {
-  font-size: 20px;
-  line-height: 28px;
-  color: #252b42;
+  margin-bottom: 7px;
 }
 
 .h4 {
@@ -475,19 +421,19 @@ ul li:hover .dropdown {
   margin-bottom: 36px;
 }
 
-@media only screen and (max-width: 1496px) {
-  #naslovManjiekrani,
-  #paragrafManjiekrani {
-    display: none;
-  }
+#h2-on-smaller-screen,
+#h4-on-smaller-screen,
+#h3-on-smaller-screen {
+  display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .lightning-unite-class {
     flex-direction: column;
     gap: 10px;
     padding: 20px 20px;
     font-size: 80%;
+    justify-content: center;
   }
 
   .lightning-button-input {
@@ -498,23 +444,49 @@ ul li:hover .dropdown {
     display: none;
   }
 
-  #naslovManjiekrani,
-  #paragrafManjiekrani {
+  .lightning-h3 {
+    display: none;
+  }
+
+  #h2-on-smaller-screen,
+  #h4-on-smaller-screen,
+  #h3-on-smaller-screen {
     display: block;
   }
 
-  #paragrafManjiekrani {
-    font-size: 18px;
+  .hidden-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .second-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #h4-on-smaller-screen {
+    font-size: 28px;
     color: #374754;
     line-height: 40px;
+    text-align: center;
   }
 
-  #naslovManjiekrani {
+  #h2-on-smaller-screen {
     font-size: 30px;
     line-height: 55px;
+    font-weight: normal;
+    color: #252b42;
+    margin-bottom: 7px;
   }
 
-  .first-part {
-    flex-direction: column-reverse;
+  .button-lightning-2 {
+    padding: 17px 35px;
+    border-radius: 35px;
+  }
+
+  input {
+    padding: 19px, 35px;
   }
 }
