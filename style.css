@@ -490,3 +490,143 @@ input {
     padding: 19px, 35px;
   }
 }
+
+/* partner-section */
+.partner-union-class {
+  display: flex;
+  flex-direction: column;
+}
+
+.partner-section-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 7px;
+}
+
+.h2-partner-section {
+  font-size: 48px;
+  line-height: 55px;
+  color: #252b42;
+  font-weight: normal;
+  margin-top: 120px;
+}
+
+.h4-partner-section {
+  font-size: 28px;
+  line-height: 40px;
+  color: #374754;
+  font-weight: normal;
+  width: 50%;
+}
+.partner-section-central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.row-1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 80px;
+  align-items: center;
+  width: 100%;
+}
+
+.h6 {
+  font-size: 16px;
+  line-height: 23px;
+  color: #374754;
+}
+
+.column-1 {
+  padding: 31px 40px;
+}
+
+.column-2 {
+  padding: 32px 40px;
+}
+
+.column-3,
+.column-4 {
+  padding: 25px 40px;
+}
+.column-1,
+.column-2,
+.column-3,
+.column-4 {
+  border: 1px solid #d8d8d8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.row-2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  width: 100%;
+}
+
+.row-2-column-1,
+.row-2-column-2,
+.row-2-column-3,
+.row-2-column-4 {
+  border: 1px solid #d8d8d8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.row-2-column-1 {
+  padding: 40px;
+}
+
+.row-2-column-2 {
+  padding: 31px 40px;
+}
+
+.row-2-column-3 {
+  padding: 25px 40px;
+}
+
+.row-2-column-4 {
+  padding: 32px 40px;
+}
+
+.partner-button {
+  background-color: #2091f9;
+  border-color: #2091f9;
+  color: #ffffff;
+  padding: 16px;
+  border-radius: 35px;
+  border: 1px;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 80px;
+}
+
+@media only screen and (max-width: 768px) {
+  .column-4,
+  .row-2 {
+    display: none;
+  }
+  .row-1 {
+    grid-template-columns: 3fr;
+    gap: 15px;
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+
+  .column-1,
+  .column-2,
+  .column-3 {
+    padding: 25px 40px;
+  }
+}
