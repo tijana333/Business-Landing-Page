@@ -1038,6 +1038,7 @@ textarea {
   transition: background-color 0.3s ease;
   font-size: 20px;
   line-height: 20px;
+  margin-right: 258px;
 }
 .contact-block {
   display: flex;
@@ -1045,11 +1046,6 @@ textarea {
   align-items: center;
   text-align: center;
   gap: 15px;
-}
-.phone,
-.location,
-.mail {
-  width: 100%;
 }
 
 .block-title {
