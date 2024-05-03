@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Graphik", sans-serif;
 }
 
 body {
@@ -26,13 +27,16 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 15px;
+  margin-right: 336px;
 }
 .hero-header {
   height: 60px;
   padding-top: 10px;
   justify-content: space-between;
 }
-
+.hero-inner-container-logo > img {
+  margin-right: 305px;
+}
 .secondary-menu li a {
   display: inline-block;
   text-decoration: none;
@@ -158,20 +162,18 @@ ul li:hover .dropdown {
 
 .paragraph-one {
   font-size: 28px;
-  align-items: center;
+  line-height: 40px;
   color: #ffffff;
   text-align: center;
   margin-bottom: 60px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  margin-top: 17px;
 }
 
 .button1 {
   background-color: #2091f9;
   border-color: #2091f9;
   color: #ffffff;
-  padding: 0px 16px;
+  padding: 16px 16px;
   border-radius: 35px;
   justify-content: center;
   cursor: pointer;
@@ -213,12 +215,13 @@ ul li:hover .dropdown {
   font-weight: normal;
   color: #252b42;
   margin-bottom: 17px;
+  line-height: 55px;
 }
 
 .h2 {
   font-size: 28px;
   font-weight: normal;
-  width: 40%;
+  width: 100%;
   margin: 0 auto;
   color: #374754;
   margin-bottom: 80px;
@@ -227,13 +230,20 @@ ul li:hover .dropdown {
 .central-section {
   display: flex;
   flex-direction: row;
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   font-size: 18px;
   color: #374754;
   gap: 52px;
   align-items: center;
   line-height: 25px;
+}
+#features-central-paragraph {
+  font-size: 18px;
+  line-height: 25px;
+  color: #374754;
+  font-weight: normal;
+  width: 90%;
 }
 
 .features-images {
@@ -246,6 +256,7 @@ ul li:hover .dropdown {
   font-size: 20px;
   margin-bottom: 10px;
   color: #252b42;
+  line-height: 28px;
 }
 
 .features-bottom-images > img {
@@ -996,6 +1007,7 @@ p {
   gap: 45px;
   box-shadow: 0px 13px 19px 0px #00000012;
   border: 1px solid #dddddd;
+  border-radius: 10px;
 }
 
 .contact-column-2 {
@@ -1022,7 +1034,6 @@ textarea {
   color: #ffffff;
   padding: 18px 38px;
   border-radius: 35px;
-  justify-content: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-size: 20px;
@@ -1059,7 +1070,7 @@ textarea {
   padding-bottom: 24px;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 3000px) {
   .contact-subtitle-smaller-screen {
     display: none;
   }
