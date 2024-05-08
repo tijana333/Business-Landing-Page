@@ -112,7 +112,7 @@ ul li:hover .dropdown {
   position: absolute;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 730px) {
   .hero-inner-container-logo {
     margin-left: 16px;
   }
@@ -129,7 +129,7 @@ ul li:hover .dropdown {
   }
 }
 
-@media only screen and (max-width: 2000px) {
+@media only screen and (max-width: 2600px) {
   .burger-menu {
     display: none;
   }
@@ -575,6 +575,7 @@ input {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  height: 163px;
 
   & img {
     max-width: 100%;
@@ -1053,6 +1054,7 @@ textarea {
 }
 
 .map-screen {
+  max-width: 100%;
   padding-left: 104.5px;
   padding-right: 104.5px;
 }
