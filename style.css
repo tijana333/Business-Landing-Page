@@ -112,7 +112,7 @@ ul li:hover .dropdown {
   position: absolute;
 }
 
-@media only screen and (max-width: 730px) {
+@media only screen and (max-width: 768px) {
   .hero-inner-container-logo {
     margin-left: 16px;
   }
@@ -1193,4 +1193,22 @@ footer {
     flex-direction: column;
     gap: 76px;
   }
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-image: url("./assets/images/hero-background.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  min-height: 100vh;
+  background-size: cover;
+  color: #fff;
+}
+
+.paragraph-about-section {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
