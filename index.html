@@ -13,6 +13,7 @@
     <title>Bussiness Landing page</title>
   </head>
   <body>
+
     <section class="hero-section">
       <div class="container">
         <div class="hero-header">
@@ -122,6 +123,13 @@
       </div>
     </section>
 
+      <style>
+        .lightning-section {
+            display: block; /* Initially visible */
+        }
+    </style>
+    
+
     <!-- key-benefits section -->
 <section class="key-benefits">
   <div class="container">
@@ -135,8 +143,9 @@
             <h2 class="h2-key">Most calendars are designed for teams. 
               Slate is designed for freelancers</h2>
              <div><button class="button2">Try For Free</button></div>
+           <div><button id="toggle-btn" class="button2">Hide</button></div>
           </div>
-          <div class="key-benefit-img-section">
+          <div  id="toggle-element" class="key-benefit-img-section">
             <img src="assets/images/key-benefit-section/laptop.png" alt="laptop-screen">
           </div>
         </div>
@@ -146,11 +155,29 @@
   </div>
   </section>
 
+  <script>
+
+    const toggleButton= document.getElementById("toggle-btn")
+    const toggleElement= document.getElementById("toggle-element")
+
+    toggleButton.addEventListener('click',function() {
+
+             if(toggleElement.style.display ==='none'){
+              toggleElement.style.display= 'block';
+              toggleButton.textContent='Hide';
+    } else {
+         toggleElement.style.display='none';
+         toggleButton.textContent='Show';
+    }
+    });
+
+  </script>
+
 
 
  
      <!-- lighting- section -->
-     <section class="lightning-section">
+     <section id="toggle-element" class="lightning-section">
       <div class="container">
         <div class="lightning-header">
           <div class="lightning-outer-container">
