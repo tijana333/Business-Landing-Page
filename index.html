@@ -144,6 +144,7 @@
               Slate is designed for freelancers</h2>
              <div><button class="button2">Try For Free</button></div>
            <div><button id="toggle-btn" class="button2">Hide</button></div>
+           <div><button id="color-btn" class="button2">Switch Color</button></div>
           </div>
           <div  id="toggle-element" class="key-benefit-img-section">
             <img src="assets/images/key-benefit-section/laptop.png" alt="laptop-screen">
@@ -160,17 +161,25 @@
     const toggleButton= document.getElementById("toggle-btn")
     const toggleElement= document.getElementById("toggle-element")
 
+    const colorButton = document.getElementById('color-btn');
+
+const colors = ['blue', 'green'];
+let colorIndex = 0;
+
     toggleButton.addEventListener('click',function() {
 
-             if(toggleElement.style.display ==='none'){
-              toggleElement.style.display= 'block';
-              toggleButton.textContent='Hide';
+             if(toggleElement.style.display !=='none'){
+              toggleElement.style.display= 'none';
+              toggleButton.textContent='Show';
     } else {
-         toggleElement.style.display='none';
-         toggleButton.textContent='Show';
+         toggleElement.style.display='block';
+         toggleButton.textContent='Hide';
     }
     });
-
+    colorButton.addEventListener('click', function() {
+        colorIndex = (colorIndex + 1) % colors.length;
+        document.body.style.backgroundColor = colors[colorIndex];
+    });
   </script>
 
 
