@@ -1212,3 +1212,9 @@ footer {
   font-size: 20px;
   margin-bottom: 15px;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

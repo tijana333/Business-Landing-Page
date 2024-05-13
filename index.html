@@ -15,12 +15,17 @@
       .lightning-section {
           display: block; 
       }
-  </style>
-
-  <style>
       p {
       font-size: 16px; 
         }
+
+        .error-message {
+        color: red;
+    }
+
+    .success-message {
+        color: green;
+    }
   </style>
   </head>
   <body>
@@ -71,24 +76,7 @@
 
           <button class="button1">Try For Free</button>
           <button id="increase-btn" class="button1">Increase Font Size</button>
-          <script>
-            const paragraph=document.getElementById('paragraph');
-            const increaseButton=document.getElementById('increase-btn')
-
-            let currentSize=16;
-            const maxSize=60;
-
-            increaseButton.addEventListener('click',function(){
-              currentSize+=5;
-
-              if (currentSize>maxSize){
-                currentSize=16;
-              }
-
-              paragraph.style.fontSize=currentSize+ 'px';
-
-            });
-          </script>
+        
         </div>
       </div>
     </section>
@@ -183,32 +171,6 @@
     </div>
   </div>
   </section>
-
-  <script>
-
-    const toggleButton= document.getElementById("toggle-btn")
-    const toggleElement= document.getElementById("toggle-element")
-
-    const colorButton = document.getElementById('color-btn');
-
-const colors = ['#252b42', '#0000'];
-let colorIndex = 0;
-
-    toggleButton.addEventListener('click',function() {
-
-             if(toggleElement.style.display !=='none'){
-              toggleElement.style.display= 'none';
-              toggleButton.textContent='Show';
-    } else {
-         toggleElement.style.display='block';
-         toggleButton.textContent='Hide';
-    }
-    });
-    colorButton.addEventListener('click', function() {
-        colorIndex = (colorIndex + 1) % colors.length;
-        document.body.style.backgroundColor = colors[colorIndex];
-    });
-  </script>
 
 
 
@@ -306,18 +268,6 @@ let colorIndex = 0;
         <button class="partner-button">Try For Free</button>
         <p>Count: <span id="count">0</span></p>
         <button id="increment-btn" class="partner-button">Increment</button>
-        <script>
-          const countElement=document.getElementById('count');
-          const incrementButton= document.getElementById('increment-btn');
-
-          let count=0;
-
-          incrementButton.addEventListener('click',function() {
-            count++;
-            countElement.textContent=count;
-          });
-
-        </script>
          </div>
         </div>
       </div>
@@ -452,12 +402,18 @@ let colorIndex = 0;
             <div class="contact-row">
               <div class="contact-column-1">
                 <h3 class="column-title">Contact Us</h3>
+                <form id="myForm">
                 <input type="text" name="name-input" id="input1" placeholder="Your Name"> 
+                <span id="nameError" class="error-message"></span><br>
                 <input type="text" name="email-input" id="input2" placeholder="Your Email">
+                <span id="emailError" class="error-message"></span><br>
                 <textarea placeholder="Your message" ></textarea>
-       
-                  
-                <button class="contact-button">Send</button>
+                <button class="contact-button" id="submitBtn">Send</button>
+                </form>
+                <div id="successMessage" class="success-message" style="display:none;">
+                  Form submitted successfully!
+              </div>
+              
                 </div>
                 <div class="contact-column-2">
                   <div class="contact-block">
@@ -548,6 +504,98 @@ let colorIndex = 0;
   </div>
 </footer>
 
+<script>
+  const paragraph = document.getElementById('paragraph');
+  const increaseButton = document.getElementById('increase-btn');
+
+  let currentSize = 16;
+  const maxSize = 60;
+
+  increaseButton.addEventListener('click', function() {
+    currentSize += 5;
+
+    if (currentSize > maxSize) {
+      currentSize = 16;
+    }
+
+    paragraph.style.fontSize = currentSize + 'px';
+  });
+
+  const toggleButton = document.getElementById("toggle-btn");
+  const toggleElement = document.getElementById("toggle-element");
+
+  toggleButton.addEventListener('click', function() {
+    if (toggleElement.style.display !== 'none') {
+      toggleElement.style.display = 'none';
+      toggleButton.textContent = 'Show';
+    } else {
+      toggleElement.style.display = 'block';
+      toggleButton.textContent = 'Hide';
+    }
+  });
+
+  const colorButton = document.getElementById('color-btn');
+  const colors = ['#252b42', '#0000'];
+  let colorIndex = 0;
+
+  colorButton.addEventListener('click', function() {
+    colorIndex = (colorIndex + 1) % colors.length;
+    document.body.style.backgroundColor = colors[colorIndex];
+  });
+
+  const countElement = document.getElementById('count');
+  const incrementButton = document.getElementById('increment-btn');
+  let count = 0;
+
+  incrementButton.addEventListener('click', function() {
+    count++;
+    countElement.textContent = count;
+  });
+
+  const form=document.getElementById('myForm');
+  const nameInput= document.getElementById('input1');
+  const emailInput=document.getElementById('input2');
+  const nameError=document.getElementById('nameError');
+  const emailError=document.getElementById('emailError');
+  const successMessage=document.getElementById('successMessage');
+
+  form.addEventListener('submit',function(event){
+    event.preventDefault();
+
+    if(nameInput.value.length <3){
+      nameError.textContent='Name must be at least 3 characters';
+      return;
+    } else {
+      nameError.textContent='';
+    }
+
+    successMessage.style.display='block';
+    setTimeout(function() {
+      successMessage.style.display='none';
+    }, 3000)
+
+  });
+nameInput.addEventListener('input',function(){
+  if(nameInput.value.length <3){
+     nameError.textContent='Name must be at least 3 characters';
+  } else {
+    nameError.textContent='';
+  }
+});
+
+emailInput.addEventListener('input',function(){
+    if(!emailInput.value || !emailInput.validity.valid){
+      emailError.textContent='Please enter a valid email';
+    }else {
+      emailError.textContent='';
+    }
+})
+</script>
 
   </body>
 </html> 
+
+
+
+
+
