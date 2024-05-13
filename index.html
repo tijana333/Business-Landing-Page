@@ -11,6 +11,17 @@
     />
     
     <title>Bussiness Landing page</title>
+    <style>
+      .lightning-section {
+          display: block; 
+      }
+  </style>
+
+  <style>
+      p {
+      font-size: 16px; 
+        }
+  </style>
   </head>
   <body>
 
@@ -52,11 +63,32 @@
 
         <div class="hero-paragraph">
           <h1 class="title-one">The best products <br>start with Figma</h1>
-          <p class="paragraph-one">
+          <p id="paragraph" class=paragraph-one>
             Most calendars are designed for teams. Slate is designed<br> for
             freelancers
           </p>
+          
+
           <button class="button1">Try For Free</button>
+          <button id="increase-btn" class="button1">Increase Font Size</button>
+          <script>
+            const paragraph=document.getElementById('paragraph');
+            const increaseButton=document.getElementById('increase-btn')
+
+            let currentSize=16;
+            const maxSize=60;
+
+            increaseButton.addEventListener('click',function(){
+              currentSize+=5;
+
+              if (currentSize>maxSize){
+                currentSize=16;
+              }
+
+              paragraph.style.fontSize=currentSize+ 'px';
+
+            });
+          </script>
         </div>
       </div>
     </section>
@@ -123,11 +155,7 @@
       </div>
     </section>
 
-      <style>
-        .lightning-section {
-            display: block; /* Initially visible */
-        }
-    </style>
+
     
 
     <!-- key-benefits section -->
@@ -163,7 +191,7 @@
 
     const colorButton = document.getElementById('color-btn');
 
-const colors = ['blue', 'green'];
+const colors = ['#252b42', '#0000'];
 let colorIndex = 0;
 
     toggleButton.addEventListener('click',function() {
@@ -276,6 +304,20 @@ let colorIndex = 0;
           </div>
        </div>
         <button class="partner-button">Try For Free</button>
+        <p>Count: <span id="count">0</span></p>
+        <button id="increment-btn" class="partner-button">Increment</button>
+        <script>
+          const countElement=document.getElementById('count');
+          const incrementButton= document.getElementById('increment-btn');
+
+          let count=0;
+
+          incrementButton.addEventListener('click',function() {
+            count++;
+            countElement.textContent=count;
+          });
+
+        </script>
          </div>
         </div>
       </div>
