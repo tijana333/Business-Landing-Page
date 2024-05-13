@@ -9,9 +9,27 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    
     <title>Bussiness Landing page</title>
+    <style>
+      .lightning-section {
+          display: block; 
+      }
+      p {
+      font-size: 16px; 
+        }
+
+        .error-message {
+        color: red;
+    }
+
+    .success-message {
+        color: green;
+    }
+  </style>
   </head>
   <body>
+
     <section class="hero-section">
       <div class="container">
         <div class="hero-header">
@@ -32,8 +50,9 @@
                   </ul>
                 </li>
 
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                  <li><a href="about.html" >About</a></li>
+                  <li><a href="contact.html" >Contact</a></li>
+              
               </ul>
               <ul class="logo-section">
                 <a href="#"><i class="bx bxl-twitter"></i></a>
@@ -48,12 +67,16 @@
         </div>
 
         <div class="hero-paragraph">
-          <h1 class="title-one">The best products start with Figma</h1>
-          <p class="paragraph-one">
-            Most calendars are designed for teams. Slate is designed for
+          <h1 class="title-one">The best products <br>start with Figma</h1>
+          <p id="paragraph" class=paragraph-one>
+            Most calendars are designed for teams. Slate is designed<br> for
             freelancers
           </p>
+          
+
           <button class="button1">Try For Free</button>
+          <button id="increase-btn" class="button1">Increase Font Size</button>
+        
         </div>
       </div>
     </section>
@@ -67,7 +90,7 @@
             <div class="features-inner-container">
               <h1 class="h1">Features</h1>
               <h2 class="h2">
-                Most calendars are designed for teams. Slate is designed for
+                Most calendars are designed for teams.<br> Slate is designed for
                 freelancers
               </h2>
               <div class="unite-class"> <div class="central-section">
@@ -78,8 +101,8 @@
                     alt="shape-icon"
                   />
                   <h3 class="h3">OpenType features Variable fonts</h3>
-                  <p>
-                    Slate helps you see how many more days you need to work to
+                  <p id="features-central-paragraph">
+                    Slate helps you see how many more days you needto work to
                     reach your financial goal.
                   </p>
                 </div>
@@ -90,7 +113,7 @@
                     alt="pan-icon"
                   />
                   <h3 class="h3">Design with real data</h3>
-                  <p>
+                  <p id="features-central-paragraph">
                     Slate helps you see how many more days you need to work to
                     reach your financial goal.
                   </p>
@@ -102,7 +125,7 @@
                     alt="pan-icon"
                   />
                   <h3 class="h3">Fastest way to take action</h3>
-                  <p>
+                  <p id="features-central-paragraph">
                     Slate helps you see how many more days you need to work to
                     reach your financial goal.
                   </p>
@@ -120,6 +143,9 @@
       </div>
     </section>
 
+
+    
+
     <!-- key-benefits section -->
 <section class="key-benefits">
   <div class="container">
@@ -133,8 +159,10 @@
             <h2 class="h2-key">Most calendars are designed for teams. 
               Slate is designed for freelancers</h2>
              <div><button class="button2">Try For Free</button></div>
+           <div><button id="toggle-btn" class="button2">Hide</button></div>
+           <div><button id="color-btn" class="button2">Switch Color</button></div>
           </div>
-          <div class="key-benefit-img-section">
+          <div  id="toggle-element" class="key-benefit-img-section">
             <img src="assets/images/key-benefit-section/laptop.png" alt="laptop-screen">
           </div>
         </div>
@@ -148,7 +176,7 @@
 
  
      <!-- lighting- section -->
-     <section class="lightning-section">
+     <section id="toggle-element" class="lightning-section">
       <div class="container">
         <div class="lightning-header">
           <div class="lightning-outer-container">
@@ -196,7 +224,7 @@
               <h4 class="h4-partner-section">Most calendars are designed for teams. 
                 Slate is designed for freelancers</h4>
           </div>
-          <div class="partner-unite-class">
+          <div  class="partner-unite-class">
           <div class="partner-section-central">
           <div class="row-1">
             <div class="column-1">
@@ -238,6 +266,8 @@
           </div>
        </div>
         <button class="partner-button">Try For Free</button>
+        <p>Count: <span id="count">0</span></p>
+        <button id="increment-btn" class="partner-button">Increment</button>
          </div>
         </div>
       </div>
@@ -273,9 +303,9 @@
     </div>
   </div>
 </section>
-
+<!-- pricing-section -->
 <section class="pricing-section">
-  <section class="container">
+  <div class="container">
     <div class="pricing-header">
       <div class="pricing-section-outer-container">
         <div class="pricing-section-inner-container">
@@ -354,6 +384,262 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+<!-- contact-section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-header">
+        <div class="contact-section-outer-container">
+          <div class="contact-section-inner-container">
+            <div class="main-contact-class">
+            <div class="contact-section-top">
+                <h2 class="contact-title">Contact</h2>
+                <h4 class="contact-subtitle">Most calendars are designed for teams. 
+                  Slate is designed for freelancers</h4>
+                  <h4 class="contact-subtitle-smaller-screen">Most calendars are designed for teams. </h4>
+            </div>
+            <div class="contact-row">
+              <div class="contact-column-1">
+                <h3 class="column-title">Contact Us</h3>
+                <form id="myForm">
+                <input type="text" name="name-input" id="input1" placeholder="Your Name"> 
+                <span id="nameError" class="error-message"></span><br>
+                <input type="text" name="email-input" id="input2" placeholder="Your Email">
+                <span id="emailError" class="error-message"></span><br>
+                <textarea id="textarea-message" placeholder="Your message" ></textarea>
+                <button class="contact-button" id="submitBtn">Send</button>
+                </form>
+                <div id="successMessage" class="success-message" style="display:none;">
+                  Form submitted successfully!
+              </div>
+              <div id="savedData"></div>
+                </div>
+                <div class="contact-column-2">
+                  <div class="contact-block">
+                    <div class="location">
+                      <img src="assets/images/contact-section/location_icon.svg" alt="location_icon">
+                      <h6 class="block-title">6386 Spring St undefined Anchorage, <br>
+                        Georgia 12473 United States</h6>
+                    </div>
+                    <div class="phone">
+                      <img src="assets/images/contact-section/phone_icon.svg" alt="phone_icon">
+                      <h6 class="block-title">(843) 555-0130</h6>
+                    </div>
+                    <div class="mail">
+                      <img src="assets/images/contact-section/mail_icon.svg" alt="mail_icon">
+                      <h6 class="block-title">willie.jennings@example.com</h6>
+                    </div>
+                  </div>
+                  <div class="map-screen">
+                  <img src="assets/images/contact-section/map-screen.png" alt="map-screen">
+                </div>
+                  <div class="social-media-block">
+                    <img src="assets/images/contact-section/twitter-icon.svg" alt="twitter-icon"> 
+                    <img src="assets/images/contact-section/facebook-icon.svg" alt="facebook-icon">  
+                    <img src="assets/images/contact-section/linkedin-icon.svg" alt="linkedin-icon"> 
+
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-main-class">
+      <div class="footer-row">
+        <div class="footer-column-1">
+          <ul class="footer-list-1">
+            <h3 class="footer-title">Pages</h3>
+            <li>Home</li>
+            <li>Product</li>
+            <li>Pricing</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+        </div>
+        <div class="footer-column-2">
+          <ul class="footer-list-2">
+            <h3 class="footer-title">Tomothy </h3>
+            <li>Eleanor Edwards</li>
+            <li>Ted Robertson</li>
+            <li>Annette Russell</li>
+            <li>Jennie Mckinney</li>
+            <li>Gloria Richards</li>
+        </ul>
+        </div>
+        <div class="footer-column-3">
+          <ul class="footer-list-3">
+            <h3 class="footer-title">Jane Black</h3>
+            <li>Philip Jones</li>
+            <li>Product</li>
+            <li>Colleen Russell</li>
+            <li>Marvin Hawkins</li>
+            <li>Bruce Simmmons</li>
+        </ul>
+        </div>
+    </div>
+    <div class="footer-row-2">
+      <div class="location-footer">
+      <img src="assets/images/footer/location-icon.svg" alt="location_icon">
+      <h6 class="footer-title-2">7480 Mockingbird Hill undefined </h6>
+    </div>
+    <div class="phone-footer">
+      <img src="assets/images/footer/phone-icon.svg" alt="phone_icon">
+      <h6 class="footer-title-2">(239) 555-0108</h6>
+    </div>
+    <div class="logo-section-footer">
+      <a href="#"><i class="bx bxl-twitter"></i></a>
+      <a href="#"><i class="bx bxl-facebook"></i></a>
+      <a href="#"><i class="bx bxl-linkedin-square"></i></a>
+    </div>
+  </div>
+  </div>
+  </div>
+</footer>
+
+<script>
+  const paragraph = document.getElementById('paragraph');
+  const increaseButton = document.getElementById('increase-btn');
+
+  let currentSize = 16;
+  const maxSize = 60;
+
+  increaseButton.addEventListener('click', function() {
+    currentSize += 5;
+
+    if (currentSize > maxSize) {
+      currentSize = 16;
+    }
+
+    paragraph.style.fontSize = currentSize + 'px';
+  });
+
+  const toggleButton = document.getElementById("toggle-btn");
+  const toggleElement = document.getElementById("toggle-element");
+
+  toggleButton.addEventListener('click', function() {
+    if (toggleElement.style.display !== 'none') {
+      toggleElement.style.display = 'none';
+      toggleButton.textContent = 'Show';
+    } else {
+      toggleElement.style.display = 'block';
+      toggleButton.textContent = 'Hide';
+    }
+  });
+
+  const colorButton = document.getElementById('color-btn');
+  const colors = ['#252b42', '#0000'];
+  let colorIndex = 0;
+
+  colorButton.addEventListener('click', function() {
+    colorIndex = (colorIndex + 1) % colors.length;
+    document.body.style.backgroundColor = colors[colorIndex];
+  });
+
+  const countElement = document.getElementById('count');
+  const incrementButton = document.getElementById('increment-btn');
+  let count = 0;
+
+  incrementButton.addEventListener('click', function() {
+    count++;
+    countElement.textContent = count;
+  });
+
+  const form=document.getElementById('myForm');
+  const nameInput= document.getElementById('input1');
+  const emailInput=document.getElementById('input2');
+  const nameError=document.getElementById('nameError');
+  const emailError=document.getElementById('emailError');
+  const successMessage=document.getElementById('successMessage');
+  const textInput=document.getElementById('textarea-message');
+
+
+  form.addEventListener('submit',function(event){
+    event.preventDefault();
+
+    if(nameInput.value.length <3){
+      nameError.textContent='Name must be at least 3 characters';
+      return;
+    } else {
+      nameError.textContent='';
+    }
+
+    successMessage.style.display='block';
+    setTimeout(function() {
+      successMessage.style.display='none';
+    }, 3000)
+
+  });
+nameInput.addEventListener('input',function(){
+  if(nameInput.value.length <3){
+     nameError.textContent='Name must be at least 3 characters';
+  } else {
+    nameError.textContent='';
+  }
+});
+
+document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            var emailValue = document.getElementById("input2").value;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailValue)) {
+                document.getElementById("emailError").innerText = "Please enter a valid email address.";
+            } else {
+                document.getElementById("emailError").innerText = ""; 
+                document.getElementById("successMessage").style.display = "block"; 
+                setTimeout(function() {
+                    document.getElementById("successMessage").style.display = "none"; 
+                }, 3000);
+            }
+});
+
+  const contactForm = document.getElementById('contactForm');
+  const savedDataContainer = document.getElementById('savedData');
+
+  function saveFormData() {
+    const formData = new FormData(contactForm);
+    const formDataObject = {};
+    formData.forEach((value, key) => {
+      formDataObject[key] = value;
+    });
+    localStorage.setItem('formData', JSON.stringify(formDataObject));
+  }
+
+  function loadSavedData() {
+    const savedData = localStorage.getItem('formData');
+    if (savedData) {
+      const formData = JSON.parse(savedData);
+      const name = formData.name;
+      const email = formData.email;
+      savedDataContainer.innerHTML = `<h2>Saved Data:</h2><p>Name: ${name}</p><p>Email: ${email}</p>`;
+    }
+  }
+
+
+  contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    saveFormData();
+  
+    contactForm.reset();
+ 
+    loadSavedData();
+  });
+
+  loadSavedData();
+
+</script>
+
   </body>
 </html> 
+
+
+
+
+
