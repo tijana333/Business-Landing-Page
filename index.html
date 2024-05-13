@@ -407,13 +407,13 @@
                 <span id="nameError" class="error-message"></span><br>
                 <input type="text" name="email-input" id="input2" placeholder="Your Email">
                 <span id="emailError" class="error-message"></span><br>
-                <textarea placeholder="Your message" ></textarea>
+                <textarea id="textarea-message" placeholder="Your message" ></textarea>
                 <button class="contact-button" id="submitBtn">Send</button>
                 </form>
                 <div id="successMessage" class="success-message" style="display:none;">
                   Form submitted successfully!
               </div>
-              
+              <div id="savedData"></div>
                 </div>
                 <div class="contact-column-2">
                   <div class="contact-block">
@@ -558,6 +558,8 @@
   const nameError=document.getElementById('nameError');
   const emailError=document.getElementById('emailError');
   const successMessage=document.getElementById('successMessage');
+  const textInput=document.getElementById('textarea-message');
+
 
   form.addEventListener('submit',function(event){
     event.preventDefault();
@@ -583,13 +585,55 @@ nameInput.addEventListener('input',function(){
   }
 });
 
-emailInput.addEventListener('input',function(){
-    if(!emailInput.value || !emailInput.validity.valid){
-      emailError.textContent='Please enter a valid email';
-    }else {
-      emailError.textContent='';
+document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            var emailValue = document.getElementById("input2").value;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailValue)) {
+                document.getElementById("emailError").innerText = "Please enter a valid email address.";
+            } else {
+                document.getElementById("emailError").innerText = ""; 
+                document.getElementById("successMessage").style.display = "block"; 
+                setTimeout(function() {
+                    document.getElementById("successMessage").style.display = "none"; 
+                }, 3000);
+            }
+});
+
+  const contactForm = document.getElementById('contactForm');
+  const savedDataContainer = document.getElementById('savedData');
+
+  function saveFormData() {
+    const formData = new FormData(contactForm);
+    const formDataObject = {};
+    formData.forEach((value, key) => {
+      formDataObject[key] = value;
+    });
+    localStorage.setItem('formData', JSON.stringify(formDataObject));
+  }
+
+  function loadSavedData() {
+    const savedData = localStorage.getItem('formData');
+    if (savedData) {
+      const formData = JSON.parse(savedData);
+      const name = formData.name;
+      const email = formData.email;
+      savedDataContainer.innerHTML = `<h2>Saved Data:</h2><p>Name: ${name}</p><p>Email: ${email}</p>`;
     }
-})
+  }
+
+
+  contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    saveFormData();
+  
+    contactForm.reset();
+ 
+    loadSavedData();
+  });
+
+  loadSavedData();
+
 </script>
 
   </body>
